@@ -14,9 +14,10 @@ export default {
   data: function () {
     return {
       notes: [
-        { id: 1, body: "First note...", timestamp: Date.now() },
-        { id: 2, body: "Seconde note...", timestamp: Date.now() },
-        { id: 3, body: "Third note...", timestamp: Date.now() },
+        { id: 1, body: "This is a first test.", timestamp: Date.now() },
+        { id: 2, body: "This is a second test.", timestamp: Date.now() },
+        { id: 3, body: "This is a third test.", timestamp: Date.now() },
+        { id: 4, body: "This is a fourth test.", timestamp: Date.now() },
       ],
     };
   },
