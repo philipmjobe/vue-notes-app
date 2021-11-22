@@ -12,9 +12,9 @@ export default {
   data: function () {
     return {
       notes: [
-        { id: 1, title: "First note...", timestamp: "Timestamp here.." },
-        { id: 2, title: "Seconde note...", timestamp: "Timestamp here.." },
-        { id: 3, title: "Third note...", timestamp: "Timestamp here.." },
+        { id: 1, title: "First note...", timestamp: Date.now() },
+        { id: 2, title: "Seconde note...", timestamp: Date.now() },
+        { id: 3, title: "Third note...", timestamp: Date.now() },
       ],
     };
   },
