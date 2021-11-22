@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="note-selector" v-for="note in notes" :key="note.id">
-      <p class="note-selector-title">{{ note.title }}</p>
+    <div class="note-selector">
+      <p class="note-selector-title">{{ note.body }}</p>
       <p class="note-selector-timestamp">{{ note.timestamp }}</p>
     </div>
   </div>
@@ -9,14 +9,6 @@
 
 <script>
 export default {
-  data: function () {
-    return {
-      notes: [
-        { id: 1, title: "First note...", timestamp: Date.now() },
-        { id: 2, title: "Seconde note...", timestamp: Date.now() },
-        { id: 3, title: "Third note...", timestamp: Date.now() },
-      ],
-    };
-  },
+  props: ["note"],
 };
 </script>
