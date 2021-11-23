@@ -1,6 +1,12 @@
 <template>
   <div class="note-selectors">
-    <NoteSelector v-for="note in notes" v-bind:note="note" v-bind:key="note.id" />
+    <NoteSelector
+      v-for="note in notes"
+      v-bind:note="note"
+      v-bind:key="note.id"
+      v-bind:selectNoteId="selectNoteId"
+      v-on:selectNote="selectNote"
+    />
   </div>
 </template>
 
@@ -19,7 +25,13 @@ export default {
         { id: 3, body: "This is a third test.", timestamp: Date.now() },
         { id: 4, body: "This is a fourth test.", timestamp: Date.now() },
       ],
+      selcetNoteId: 1,
     };
+  },
+  methods: {
+    selectNote: function (note) {
+      this.selectNoteId = note.id;
+    },
   },
 };
 </script>
